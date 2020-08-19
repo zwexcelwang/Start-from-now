@@ -62,3 +62,48 @@
    - math: pi,e,floor(下),ceil(上取整),trunc(截取整数）
    - random: seed, shuffle
 
+## 4. 序列
+
+1. 操作符
+   - +是连接
+   - in，not in在不在序列中
+   - *是重复
+   - [][:][::]切片操作符
+   
+2. 索引：正-(0，len-1);负-(-len, -1)
+
+3. 序列内置函数
+
+   - str：转换成字符串
+
+     ```python
+     class Person(object):
+     	def __init__(self, name, age):
+     		self.name = name
+     		self.age = age
+     		
+     	def __str__(self):
+     		return self.name+','+str(self.age)
+     		
+     p1 = Person('hah', 6)
+     print(p1) # str(p1) 输出hah,6
+     
+     ```
+
+   - enumerate
+
+   - min/max
+
+     ```python
+     d1 = {'id': 1009,'price': 599}
+     d2 = {'id': 1002,'price': 1099}
+     d3 = {'id': 1003,'price': 1}
+     l = [d1, d2, d3]
+     
+     print(max(l,key=lambda x: x['id'])) #1009
+     ```
+
+   - sum
+   - reversed
+   - sorted
+   - zip
