@@ -104,6 +104,60 @@
      ```
 
    - sum
+   
    - reversed
+   
    - sorted
+   
    - zip
+
+## 5. 迭代器和生成器
+
+1. 迭代器
+
+   - iter()和next()
+
+     ```python
+     l = [1, 3, 4]
+     it = iter(l)
+     print(next(it1))# 1
+     ```
+
+   - StopIteration异常
+
+     ```python
+     try:
+     	print(next(it1))
+     except StopIteration as si:
+     	print('迭代结束')
+     	break
+     ```
+
+2. 生成器
+
+   - 函数里使用了yield关键字，那么，这个函数就是一个生成器
+
+   - 生成器是一种推导逻辑，调用生成器返回迭代器
+
+   - 步骤：改列表推导式[]为()或者
+
+     ```python
+     l = [2*x for x in range(3)]
+     gen = (2*x for x in range(3))
+     print(next(gen))# 0
+     
+     def func():
+     	print('step 1')
+     	yield
+     	print('step 2')
+     	yield
+     	print('step 3')
+     	yield
+     it = func()
+     print(it)# step 1
+     print(it)# step 2
+     print(it)# step 3
+     ```
+
+     
+
