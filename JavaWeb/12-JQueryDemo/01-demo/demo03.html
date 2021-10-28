@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="div1">div1...</div>
+    <div id="div2">div2...</div>
+
+
+
+    <script>
+        // 1.通过js方式来获取名称叫div的所有html元素对象
+        var divs1 = document.getElementsByTagName("div");
+        // alert(divs1.length);
+        // 对divs中所有的div让其标签体内容变为"aaa"
+        for(var i=0;  i<divs1.length; i++) {
+            divs1[i].innerHTML = "aaa";
+        }
+
+        // 2.通过jq方式来获取名称叫div的所有html元素对象
+        var divs2 = $("div");
+        alert(divs2.length);
+        // 对divs中所有的div让其标签体内容变为"bbb"
+        divs2.html("bbb");
+        
+        // jq转js
+        divs2[0].innerHTML = "ccc";
+        divs2.get(1).innerHTML = "ddd";
+        // js转jq
+        $(div1).html("eee");
+        
+        
+    </script>
+</body>
+
+</html>

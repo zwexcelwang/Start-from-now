@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        // 给按钮1添加单击事件
+        // 获取button1
+        // 就是等加载完之后再执行这个方法
+        // window.inload(function(){
+        //     $("#button1").click(function() {
+        //     alert("abc");
+        //     });
+        // });
+        
+
+        // jq的入口函数(dom文档加载完成后执行该函数中的代码)
+        $(function() {
+            $("#button1").click(function() {
+            alert("abc");
+            });
+        });
+
+        $(function(){
+            // $("#div1").css("background-color", "red");
+            $("#div1").css("backgroundColor", "pink");
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">div1...</div>
+    <div id="div2">div2...</div>
+    <input type="button" value="click" id="button1">
+
+
+    <!-- <script>
+        // 给按钮1添加单击事件
+        // 获取button1
+        $("#button1").click(function() {
+            alert("abc");
+        });
+    </script> -->
+</body>
+
+</html>
