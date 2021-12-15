@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="userMapper">
+<!--    插入操作-->
+    <insert id="save" parameterType="user">
+        INSERT INTO USER VALUES (#{id},#{username},#{password})
+    </insert>
+
+<!--    查询操作-->
+    <select id="findAll" resultType="zui.domain.User">
+        SELECT * FROM USER
+    </select>
+
+<!--    修改操作-->
+    <update id="update" parameterType="zui.domain.User">
+        UPDATE USER SET username=#{username},password=#{password} WHERE user_id=#{id}
+    </update>
+
+<!--    删除操作-->
+    <delete id="del" parameterType="java.lang.Integer">
+        DELETE FROM USER WHERE user_id=#{idd}
+--         只有一个参数，写成啥都行
+    </delete>
+
+
+    <select id="findUserById" resultType="user" parameterType="int">
+        SELECT * FROM USER WHERE user_id=#{iddd}
+    </select>
+
+</mapper>
