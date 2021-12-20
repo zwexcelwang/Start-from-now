@@ -1,0 +1,28 @@
+server:
+  port: 80
+
+country: xian
+
+user1:
+  username: tom
+  age: 11
+
+likes:
+  - eat
+  - drink
+
+users: [{name: zhangsan, age: 18},{name: lisi, age: 17}]
+
+baseDir: c:\windows
+
+# 使用${属性名}引用数据，如果\t要转义就用""包裹起来
+tempDir: ${basedir}\temp
+
+# 创建类，用于封装下面的数据
+# 由Spring帮我们去加载数据到对象中，一定要告诉spring加载这组信息
+# 使用时候从spring中直接获取信息使用
+datasource:
+  driver: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/heima
+  username: root
+  password: root

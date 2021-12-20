@@ -1,0 +1,17 @@
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/heima
+#    username: root
+#    password: zuiyia
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/heima
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
